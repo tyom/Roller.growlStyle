@@ -1,0 +1,53 @@
+//  Roller theme for Growl
+//  Author:   Tyom Semonov (tyom.net)
+
+body, html
+  -webkit-font-smoothing: antialiased
+  font: .95em/1.2 "Helvetica Neue", Helvetica, Arial, sans-serif
+
+*
+  -webkit-box-sizing: border-box
+
+#growl
+  width: 250px
+  height: 60px
+  right: 10px
+  position: absolute
+
+#notification
+  background: fade-out(#000, .2)
+  color: #fff
+  padding: 10px 10px 10px 60px
+  border-radius: 7px
+  overflow: hidden
+  text-shadow: 0 1px 1px fade-out(#000, .3)
+  box-shadow: 0 0 4px 2px fade-out(#000, .8), 0 0 0 2px fade-out(#fff, .4)
+
+  -webkit-animation-duration: 200ms
+  -webkit-animation-timing-function: ease-in-out
+  -webkit-animation-name: 'reveal'
+
+  #icon
+    float: left
+    margin: 0 10px 0 -50px
+
+    img
+      width: 40px
+      height: 40px
+      display: block
+
+  #title
+    line-height: 1
+    font-weight: bold
+    font-size: 1.2em
+    margin: 0 0 5px
+
+@-webkit-keyframes 'reveal'
+  0%
+    opacity: 0
+    -webkit-transform: scale(6, 1.4)
+  70%
+    opacity: .3
+  100%
+    opacity: 1
+    -webkit-transform: scale(1, 1)
